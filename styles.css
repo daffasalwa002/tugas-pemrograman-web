@@ -1,0 +1,269 @@
+/* ===== Global Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #0e0e0e;
+  color: #fff;
+  line-height: 1.8;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* ===== Navbar ===== */
+header {
+  background: #101010;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #00aaff;
+}
+
+.logo span {
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #00aaff;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.hero-content span {
+  color: #00aaff;
+}
+
+.hero-content p {
+  color: #ccc;
+  max-width: 600px;
+  margin: 0 auto 25px;
+}
+
+/* ===== Button ===== */
+.btn {
+  background: #00aaff;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #0088cc;
+  transform: translateY(-3px);
+}
+
+/* ===== About Section (Card Style) ===== */
+.about {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.about h2 {
+  font-size: 2.2rem;
+  color: #00aaff;
+  margin-bottom: 25px;
+}
+
+.about-box {
+  background: #1b1b1b;
+  border-radius: 16px;
+  padding: 30px 40px;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.about-box p {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+/* === Info Cards === */
+.info-card {
+  background: #2a2a2a;
+  border-radius: 10px;
+  padding: 12px 18px;
+  margin-bottom: 15px;
+  border-left: 5px solid #00aaff;
+  transition: 0.3s ease;
+}
+
+.info-card:hover {
+  background: #00aaff;
+  color: #fff;
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 170, 255, 0.4);
+}
+
+.info-card p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.info-card span {
+  font-weight: 700;
+  color: #00aaff;
+}
+
+.info-card:hover span {
+  color: #fff;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+  .about-box {
+    padding: 20px;
+  }
+  .info-card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ===== Skills Section ===== */
+.skills {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.skills h2 {
+  color: #00aaff;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+/* ===== Logo Presisi di Halaman Skills ===== */
+.skill-card {
+  background: #1b1b1b;
+  padding: 30px 20px;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-start;
+  height: 320px; /* Tinggi konsisten semua kartu */
+}
+
+.skill-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain; /* agar tidak melar */
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+/* Untuk logo dengan ukuran asli yang besar atau rasio berbeda */
+.skill-card img[alt*="Basketball"],
+.skill-card img[alt*="Padel"] {
+  width: 70px;
+  height: 70px;
+}
+
+/* Efek hover */
+.skill-card:hover {
+  background: #00aaff;
+  color: #fff;
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 170, 255, 0.4);
+}
+
+.skill-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #00aaff;
+}
+
+.skill-card p {
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.5;
+  padding: 0 5px;
+}
+
+
+/* ===== Footer ===== */
+footer {
+  background: #101010;
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  font-size: 0.9rem;
+  margin-top: 50px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .about p, .hero-content p {
+    font-size: 0.95rem;
+  }
+}
