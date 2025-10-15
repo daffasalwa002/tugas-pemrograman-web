@@ -44,9 +44,41 @@
 
     <a href="index.html" class="btn">Kembali ke Beranda</a>
   </section>
-
+    <!-- Modal Foto Basket -->
+  <div id="basketball-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img src="WhatsApp Image 2025-10-08 at 08.21.15_eaa47434.jpg"Daffa bermain basket">
+      <p>Foto saya saat sedang bermain basket 🏀</p>
+    </div>
+  </div>
+  
   <footer>
     <p>© 2025 Daffa Ramadhan Ulwan Setiawan</p>
   </footer>
+    <!-- Script harus di bawah agar bisa membaca elemen -->
+  <script>
+    const modal = document.getElementById("basketball-modal");
+    const card = document.getElementById("basketball-card");
+    const closeBtn = document.querySelector(".close");
+
+    // Tampilkan modal saat kartu diklik
+    card.addEventListener("click", () => {
+      modal.style.display = "flex";
+    });
+
+    // Tutup modal saat tombol X diklik
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    // Tutup modal jika klik area luar konten
+    window.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
 </body>
 </html>
+
